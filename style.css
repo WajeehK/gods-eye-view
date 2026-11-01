@@ -1,0 +1,29 @@
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#05070c;color:#e6edf3;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,sans-serif;overflow:hidden}
+header{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;gap:22px;padding:12px 20px;background:linear-gradient(#05070cee,#05070c00)}
+.brand{font-weight:700;letter-spacing:.18em;font-size:14px;white-space:nowrap}.brand b{color:#4cc9f0}.eye{color:#4cc9f0;text-shadow:0 0 12px #4cc9f0}
+nav{display:flex;gap:4px}nav a{padding:6px 12px;border-radius:999px;color:#8b98a9;cursor:pointer;font-size:13px}nav a.on{background:#ffffff14;color:#fff}nav a[data-soon]:hover:after{content:" · soon";color:#4cc9f0}
+.srch{margin-left:auto}.srch input{background:#ffffff0f;border:1px solid #ffffff1f;color:#fff;border-radius:999px;padding:8px 14px;width:220px;outline:none}
+#globe{position:fixed;inset:0}
+#filters{position:fixed;top:62px;left:50%;transform:translateX(-50%);z-index:4;display:flex;gap:6px;align-items:center;padding:6px;border-radius:999px;background:#0d131dcc;border:1px solid #ffffff1a;backdrop-filter:blur(14px);max-width:96vw;overflow-x:auto}
+#filters span{padding:0 10px;font-weight:600;white-space:nowrap}#filters button{background:none;border:0;color:#9fb0c3;padding:6px 12px;border-radius:999px;cursor:pointer;font-size:13px;white-space:nowrap}#filters button.on{background:#4cc9f0;color:#00131b;font-weight:600}
+.hide{display:none!important}
+aside{position:fixed;z-index:4;background:#0b111bd9;border:1px solid #ffffff17;backdrop-filter:blur(18px);border-radius:16px;overflow:auto}
+#feed{left:16px;top:70px;bottom:16px;width:300px;padding:14px}
+.fh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.live{font-size:10px;letter-spacing:.15em;color:#ff5b5b}.live i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff3b3b;margin-right:6px;animation:p 1.4s infinite}@keyframes p{50%{opacity:.25}}
+.hs{padding:10px;border-radius:10px;cursor:pointer;border-left:3px solid;margin-bottom:6px;background:#ffffff06}.hs:hover{background:#ffffff12}.hs b{display:block;font-size:13px}.hs small{color:#8b98a9}
+#panel{right:16px;top:70px;bottom:16px;width:360px;padding:20px}
+#x{position:absolute;right:12px;top:12px;background:#ffffff14;border:0;color:#fff;border-radius:50%;width:30px;height:30px;cursor:pointer}
+.flag{font-size:42px;line-height:1}h2{margin:6px 0 2px;font-size:24px}.sub{color:#8b98a9;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}.st{background:#ffffff08;border-radius:10px;padding:9px 10px}.st small{display:block;color:#7d8a9b;font-size:11px;text-transform:uppercase;letter-spacing:.06em}.st b{font-size:14px}
+h4{margin:14px 0 6px;font-size:11px;letter-spacing:.12em;color:#7d8a9b;text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{padding:4px 10px;border-radius:999px;background:#ffffff10;font-size:12px;cursor:pointer}.chip.g{background:#16a34a2e;color:#7ee2a1}.chip.r{background:#dc26262e;color:#ff9b9b}.chip.y{background:#eab3082e;color:#fde68a}.chip.b{background:#4cc9f02a;color:#9be3f7}
+.nuke{background:#7c2d1233;border:1px solid #f9731655;border-radius:10px;padding:8px 10px;color:#fdba74}
+.news a{display:block;color:#cfe3f5;text-decoration:none;padding:7px 0;border-bottom:1px solid #ffffff10;font-size:13px}.news small{color:#7d8a9b}
+#legend{position:fixed;right:16px;bottom:16px;z-index:3;display:flex;gap:12px;font-size:12px;color:#9fb0c3;background:#0b111bb0;padding:6px 12px;border-radius:999px}#legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+#panel:not(.hide)~#legend{display:none}
+#tip{position:fixed;pointer-events:none;z-index:9;background:#0b111bee;border:1px solid #ffffff22;padding:5px 9px;border-radius:8px;font-size:12px;display:none}
+#feedbtn{display:none}
+@media(max-width:760px){header{gap:10px;padding:10px 12px;flex-wrap:wrap}nav{order:3;width:100%;overflow-x:auto}.srch input{width:130px}
+#filters{top:100px}#feed{left:8px;right:8px;top:auto;bottom:8px;width:auto;max-height:45vh;display:none}#feed.open{display:block}
+#feedbtn{display:block;position:fixed;left:12px;bottom:14px;z-index:3;background:#0b111bd9;color:#fff;border:1px solid #ffffff22;border-radius:999px;padding:8px 14px}
+#panel{left:0;right:0;bottom:0;top:auto;width:auto;max-height:62vh;border-radius:18px 18px 0 0}#legend{bottom:14px;right:12px}}

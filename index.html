@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gods Eye View — Interactive Globe</title><meta name="theme-color" content="#05070c">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+<link rel="stylesheet" href="style.css"></head><body>
+<header id="top"><div class="brand"><span class="eye">◉</span> GODS EYE <b>VIEW</b></div>
+<nav><a class="on">Globe</a><a data-soon>Developments</a><a data-soon>Watchlist</a><a data-soon>Markets</a></nav>
+<div class="srch"><input id="q" placeholder="Search country…" list="cl" autocomplete="off"><datalist id="cl"></datalist></div></header>
+<div id="globe"></div>
+<div id="filters" class="hide"><span id="fname"></span>
+<button data-m="conflicts">Conflicts</button><button data-m="partners">Partners</button><button data-m="adversaries">Adversaries</button><button data-m="trade">Trade</button><button data-m="bases">Bases</button><button data-m="nuclear">Nuclear</button></div>
+<aside id="feed"><div class="fh"><b>Global hotspots</b><span class="live"><i></i>TRACKING</span></div><div id="flist"></div></aside>
+<button id="feedbtn">Hotspots</button>
+<aside id="panel" class="hide"><button id="x">✕</button><div id="pc"></div></aside>
+<div id="legend"><span><i style="background:#ff3b3b"></i>War</span><span><i style="background:#ff9f1a"></i>Conflict</span><span><i style="background:#f5d90a"></i>Tension</span></div>
+<div id="tip"></div>
+<script src="https://cdn.jsdelivr.net/npm/globe.gl@2.34.2/dist/globe.gl.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script src="data/world.js"></script><script src="app.js"></script></body></html>
