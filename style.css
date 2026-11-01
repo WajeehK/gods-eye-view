@@ -57,3 +57,18 @@ h4{margin:16px 0 7px;font:600 9px var(--mono);letter-spacing:.2em;color:var(--mu
 .tb svg{width:22px;height:22px}.tb.on{color:#fff}.tb.on svg{stroke-width:2.4}
 @media(min-width:900px){#card{left:0;right:auto;width:520px;padding:80px 28px 100px 28px;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.6) 80%,transparent),linear-gradient(180deg,transparent,#000 40%);background:linear-gradient(90deg,rgba(0,0,0,.92) 55%,transparent);border-radius:0 18px 0 0}
  #drawer{left:auto;top:calc(26px + var(--st));height:auto;width:360px;border-top:0;border-left:1px solid var(--bd);padding-bottom:20px}.hl{font-size:30px}}
+/* v4 */
+#ret{display:none}
+#cret{position:fixed;z-index:3;left:50%;top:50%;width:128px;height:46px;margin:-23px 0 0 -64px;pointer-events:none;display:grid;place-items:center}
+#cret i{position:absolute;width:12px;height:12px;border:2px solid #fff}#cret .c1{left:0;top:0;border-right:0;border-bottom:0}#cret .c2{right:0;top:0;border-left:0;border-bottom:0}#cret .c3{left:0;bottom:0;border-right:0;border-top:0}#cret .c4{right:0;bottom:0;border-left:0;border-top:0}
+#cco{font-size:9.5px;color:#fff;letter-spacing:.04em;text-shadow:0 0 4px #000,0 0 2px #000}
+#card{background:#000;padding:16px 20px calc(92px + var(--sb));border-top:1px solid var(--bd)}
+.tag.yk{background:var(--y);color:#000}
+.tu{max-height:none;-webkit-mask:none;border:0;padding:0;margin-top:10px;font-size:13.5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.tu:before{display:none}.tu b{color:#fff}
+.hl{font-size:24px;font-weight:700;margin:10px 0 6px}
+.ml{pointer-events:none;white-space:nowrap;transform:translate(-50%,-50%);animation:fi .45s ease both;text-shadow:0 0 3px #000,0 1px 4px #000}
+@keyframes fi{from{opacity:0}}
+.ml.cap{font:700 10.5px var(--mono);color:#fff;letter-spacing:.06em}.ml.city{font:600 9px var(--mono);color:#e6e6e6;letter-spacing:.05em}
+.ml.geo{font:italic 400 12px Georgia,"Times New Roman",serif;color:rgba(225,225,225,.55);letter-spacing:.06em}
+.ml.selp{transform:translate(-50%,-260%);background:#fff;color:#000;font:800 11px Poppins,sans-serif;letter-spacing:.08em;padding:3px 9px;border-radius:999px;text-shadow:none;box-shadow:0 2px 10px rgba(0,0,0,.6)}
+@media(min-width:900px){#card{background:#000;width:500px;border-right:1px solid var(--bd);border-radius:0 16px 0 0;padding:18px 26px 100px}}
