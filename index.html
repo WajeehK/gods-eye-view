@@ -1,17 +1,19 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Gods Eye View — Interactive Globe of World Affairs</title><meta name="theme-color" content="#0e0e0e">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='none' stroke='%23f2d200' stroke-width='8'/><circle cx='50' cy='50' r='16' fill='%23f2d200'/></svg>">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+<title>Gods Eye View — Interactive Globe of World Affairs</title><meta name="theme-color" content="#000000">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="img/apple-touch-icon.png"><link rel="icon" href="img/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Gods Eye">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2"></head><body>
-<div id="gridbg"></div><div id="globe"></div>
-<header id="top"><div class="brand"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17"/><ellipse cx="20" cy="20" rx="17" ry="7"/><circle cx="20" cy="20" r="4.5" class="f"/></svg><div>GODS EYE<small>VIEW</small></div></div>
-<div class="status"><span id="stc">WORLD</span><span id="stx" class="mono">—</span></div>
-<div class="hr"><button id="tour" class="ctrl">❚❚ PAUSE LIVE TOUR</button><input id="q" placeholder="SEARCH COUNTRY" list="cl" autocomplete="off"><datalist id="cl"></datalist></div></header>
-<div id="filters"><button data-m="conflicts">Armed conflict</button><button data-m="partners">Key partners</button><button data-m="adversaries">Key adversaries</button><button data-m="trade">Top trade</button><button data-m="bases">Foreign bases</button><button data-m="nuclear">Nuclear range</button></div>
-<aside id="left"><div class="vlab">CONFLICT TRACKER</div><div id="tracker"></div></aside>
-<aside id="right"><div class="tabs"><span class="rt on" data-t="ev">Latest events</span><span class="rt" data-t="cp">Country profile</span></div><div id="ev"></div><div id="cp" class="hide"><div class="empty">Select a country on the globe.</div></div></aside>
+<link rel="stylesheet" href="style.css?v=3"></head><body>
+<div id="globe"></div><div id="vig"></div>
+<div id="ret" class="hide"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i><span id="rco" class="mono"></span><span id="rtag"></span></div>
 <div id="ticker"><b>LIVE</b><div class="tk"><div id="tkin"></div></div></div>
+<header id="top"><button id="menu" aria-label="Menu"><span></span><span></span><span></span></button><button id="sbtn" class="ybtn">⌕ SEARCH</button><input id="q" class="hide" placeholder="Country…" list="cl" autocomplete="off"><datalist id="cl"></datalist>
+<div class="brand"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17"/><ellipse cx="20" cy="20" rx="17" ry="7"/><circle cx="20" cy="20" r="4.5" class="f"/></svg><div>GODS EYE<small>VIEW</small></div></div></header>
+<div id="filters" class="hide"><button data-m="conflicts">Armed conflict</button><button data-m="partners">Key partners</button><button data-m="adversaries">Key adversaries</button><button data-m="trade">Top trade</button><button data-m="bases">Foreign bases</button><button data-m="nuclear">Nuclear range</button><button data-x>✕</button></div>
+<section id="card"><div class="ctop"><span class="tag red">● Tracking</span><span id="cidx" class="mono"></span></div><div id="cbody"></div>
+<div class="cfoot"><button id="full" class="mono">» FULL STORY</button><div id="pager"></div></div></section>
+<aside id="drawer" class="hide"><div class="tabs"><span class="rt on" data-t="ev">Latest events</span><span class="rt" data-t="cp">Profile</span><button id="dx">✕</button></div><div id="ev"></div><div id="cp" class="hide"></div></aside>
 <div id="soon" class="hide"><div><div class="mono y">COMING SOON</div><h2 id="soont"></h2><p>This section is being built.</p></div></div>
 <nav class="dock" id="dock"><div class="bubble" id="bubble"></div>
 <button class="tb on" data-t="globe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Globe</button>
@@ -21,4 +23,5 @@
 <div id="tip"></div>
 <script src="https://cdn.jsdelivr.net/npm/globe.gl@2.34.2/dist/globe.gl.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
-<script src="data/world.js"></script><script src="app.js?v=2"></script></body></html>
+<script src="data/world.js?v=3"></script><script src="app.js?v=3"></script>
+<script>if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js'))</script></body></html>
